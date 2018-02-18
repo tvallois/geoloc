@@ -1,0 +1,24 @@
+{
+  "name": "geoloc",
+  "version": "1.0.0",
+  "description": "geolocalisation project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Thibault Vallois",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.2",
+    "bson-ext": "^1.0.5",
+    "ejs": "^2.5.7",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "pg": "^7.4.1"
+  }
+}

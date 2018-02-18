@@ -1,0 +1,22 @@
+.applogo {
+  margin: 20% 5% 5% 0;
+}
+
+.btn {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+.gitlabbutton {
+  background-color: #2e2e2e;
+  padding-right:2.7rem;
+  padding-left:2.8rem;
+  background-image: url('http://localhost:3000/img/gitlab_logo-svg.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  border-color: #2e2e2e;
+}
+
+.gitlabbutton:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
