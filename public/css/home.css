@@ -11,6 +11,7 @@
   padding-right:2.7rem;
   padding-left:2.8rem;
   background-image: url('http://localhost:3000/img/gitlab_logo-svg.png');
+  background-size: 15%;
   background-repeat: no-repeat;
   background-position: left;
   border-color: #2e2e2e;

@@ -1,13 +1,18 @@
-const User = require('../models/user');
 const UserPersistor = require('../persistors/user');
+const Utils = require('../utils/utils.js');
 
-exports.getUserByEmail = async function (req, res, next) {
-  const result = await UserPersistor.getUserByEmail(req.body.email);
-  console.log(result);
-  if (result.length === 0) {
-    return res.status(400).json({ status: 400, message: 'No result was found for this email' });
-  }
-  return res.status(200).json({ status: 200, data: result });
+exports.getUserByEmail = function (req, res, next) {
+  UserPersistor.getUserByEmail(req.body.email).then(function(result){  
+    console.log(result)
+    if (result.length === 0) {
+      return res.status(400).json({ status: 400, message: 'No result was found for this email' });
+    }
+    if (!Utils.isPasswordCorrect(result, req.body.password)) {
+      return res.status(404).json({ status: 404, message: 'Wrong password' });
+    }
+    next();
+    return res.status(200).json({ status: 200, data: result });
+  });
 };
 
 // exports.getUserById = function(req, res) {
