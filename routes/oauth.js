@@ -11,6 +11,6 @@ router.use((req, res, next) => {
   next();
 });
 
-router.post('/', userController.getUserByEmail, oauthController.getAccessToken);
+router.post('/', userController.login, oauthController.getAccessToken);
 
 module.exports = router;
