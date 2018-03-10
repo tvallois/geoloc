@@ -6,35 +6,35 @@ class User {
     this.email = email;
   }
   get id() {
-    return this.id;
+    return this.user_id;
   }
 
   get login() {
-    return this.login;
+    return this.user_login;
   }
 
   get password() {
-    return this.password;
+    return this.user_password;
   }
 
   get email() {
-    return this.email;
+    return this.user_email;
   }
 
   set id(value) {
-    this.id = value;
+    this.user_id = value;
   }
 
   set login(value) {
-    this.login = value;
+    this.user_login = value;
   }
 
   set password(value) {
-    this.password = value;
+    this.user_password = value;
   }
 
   set email(value) {
-    this.email = value;
+    this.user_email = value;
   }
 }
 

@@ -8,19 +8,12 @@ router.use((req, res, next) => {
   next();
 });
 
-router.post('/v1/addUser', (req, res) => {
-});
-
 router.get('/v1/getUser/:id', userController.getUserById);
 
-router.get('/v1/getUsers', (req, res) => {
+router.post('/v1/addUser', userController.addNewUser);
 
-});
+router.get('/v1/getUsers', userController.getUsers);
 
-router.delete('/v1/deleteUser', (req, res) => {
-
-});
-
-
+router.delete('/v1/deleteUser', userController.removeUser);
 
 module.exports = router;

@@ -29,3 +29,4 @@ exports.getUserById = function (req, res) {
   });
 };
 
+exports.addNewUser

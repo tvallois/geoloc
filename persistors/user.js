@@ -16,13 +16,17 @@ exports.getUserById = function (id) {
   return db.query(query, [id])
     .then((res) => {
       const user = new User(res.rows[0].id, res.rows[0].login, res.rows[0].password, res.rows[0].email);
+      console.log(user.id);
       return user;
     })
-    .catch(err => err);
+    .catch((err) => {
+      console.log(err);
+      return err;
+    });
 };
 
 
-exports.createNewUser = function (body) {
+exports.addNewUser = function (body) {
   const newUserQuery = 'INSERT INTO users(id, login, email, password) VALUES ($1, $2, $3, $4)';
   return db.query(newUserQuery, [body.id, body.login, body.email, body.password])
     .then(res => res.rowCount)

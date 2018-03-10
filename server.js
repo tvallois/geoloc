@@ -4,6 +4,7 @@ const path = require('path');
 const index = require('./routes/index');
 const connect = require('./routes/connect');
 const oauth = require('./routes/oauth');
+const user = require('./routes/user');
 const bodyParser = require('body-parser');
 
 // Express connection and set views
@@ -18,6 +19,7 @@ app.use(express.static('public'));
 app.use('/index', index);
 app.use('/connect', connect);
 app.use('/oauth', oauth);
+app.use('/user', user);
 
 
 module.exports = app;
