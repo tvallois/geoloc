@@ -5,6 +5,7 @@ class User {
     this.password = password;
     this.email = email;
   }
+
   get id() {
     return this.user_id;
   }
